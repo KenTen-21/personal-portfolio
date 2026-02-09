@@ -1,0 +1,182 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: right;
+}
+.navbar li {
+    display: inline-block;
+}
+.navbar a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #111;
+}
+
+/* Add more styles for other sections as needed */
+.AboutSection {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.AboutSection h2 {
+    text-align: center;
+}
+.AboutSection p {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.SkillsSection {
+    padding: 20px;
+}
+
+.SkillsSection h2 {
+    text-align: center;
+}
+.SkillsSection ul {
+    list-style-type: square;
+    padding: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+.SkillsSection li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.ExperienceSection {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.ExperienceSection h2 {
+    text-align: center;
+}
+.ExperienceSection .job {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.ExperienceSection .job h3 {
+    margin: 0;
+}
+
+.ProjectsSection {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.ProjectsSection h2 {
+    text-align: center;
+}
+.ProjectsSection .project {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+.ProjectsSection .project h3 {
+    margin: 0;
+}
+.ContactSection {
+    padding: 20px;
+}
+.ContactSection h2 {
+    text-align: center;
+}
+.ContactSection p {
+    text-align: center;
+}
+.ContactSection a {
+    color: #333;
+    text-decoration: none;
+}
+.ContactSection a:hover {
+    text-decoration: underline;
+}
+
+img {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.hamburger {
+    display: none;              /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.3s;           /* Smooth animation for rotate effect */
+}
+
+/* Mobile devices - hide navbar by default */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;          /* Show hamburger button on mobile */
+    }
+    
+    .navbar {
+        display: none;          /* Hide navbar by default */
+        position: absolute;
+        top: 60px;              /* Position below header */
+        left: 0;
+        right: 0;
+        background-color: #333;
+        flex-direction: column;
+    }
+    
+    .navbar.active {
+        display: flex;          /* Show when active class is applied */
+    }
+    
+    .navbar a {
+        padding: 15px;
+        border-bottom: 1px solid #555;
+    }
+}
+
+/* Desktop devices - always show navbar */
+@media (min-width: 769px) {
+    .navbar {
+        display: flex !important;
+    }
+}
